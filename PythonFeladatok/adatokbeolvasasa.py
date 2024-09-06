@@ -13,5 +13,5 @@ def Main(nums):
             numlist.remove(k)
 
     print(numlist)
-
+#gyerunk
 Main(nums)
