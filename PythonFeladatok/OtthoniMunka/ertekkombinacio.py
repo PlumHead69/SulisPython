@@ -1,15 +1,20 @@
 def ValueCombination(numslist):
     value = []
     for i in range(len(numslist)):
-        if numslist[i] >= 2000:
-            value.append(f"{numslist[i -2000]} {i}")
+        if int(numslist[i]) <= 2000:
+            value.append(int(numslist[i]))
         else:
-            value.append(f"{2000 - numslist[i]} {i}")
+            value.append(int(numslist[i]) - 2000)
     value.sort()
-    print(value)
-    #print("A két legnagyobb elem: " + str(value[0]) + " " + str(value[1]))
+    print("A két szám " + str(value[-1]) + " " + str(value[-2]))
+    i = value[-1] + value[-2]
+    print("A két szám összege: " + str(i))
+    k = value[-1] * value[-2]
+    print("A két szám szorzata: " + str(k))
+    
 
 #values = input("Adja meg a szamokat: ")
-values = ( 21,30,21, 430, 810)
-ValueCombination(values)
+values = input("Kérek 5 számot:")
+values.strip()
+ValueCombination(tuple(values))
 
