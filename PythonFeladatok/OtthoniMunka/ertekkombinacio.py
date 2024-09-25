@@ -6,6 +6,7 @@ def ValueCombination(numslist):
         else:
             value.append(int(numslist[i]) - 2000)
     value.sort()
+    print(value)
     print("A két szám " + str(value[-1]) + " " + str(value[-2]))
     i = value[-1] + value[-2]
     print("A két szám összege: " + str(i))
@@ -15,6 +16,19 @@ def ValueCombination(numslist):
 
 #values = input("Adja meg a szamokat: ")
 values = input("Kérek 5 számot:")
-values.strip()
-ValueCombination(tuple(values))
+lister = list(values)
+ListValues = []
+
+
+for i in range(len(lister)):
+    if lister[i] != ",":
+        ListValues.append(lister[i])
+
+
+ValueCombination(ListValues)
+
+
+
+
+
 
